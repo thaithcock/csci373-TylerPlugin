@@ -1,0 +1,7 @@
+#This is a sample config.yml
+sample:
+  message: Hello Bukkit world.
+jump:
+  message: jumped!
+arrows:
+  message: arrows created!

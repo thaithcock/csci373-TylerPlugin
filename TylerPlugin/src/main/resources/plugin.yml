@@ -1,0 +1,33 @@
+# This is a sample plugin.yml
+# For more infomration refer to http://wiki.bukkit.org/Plugin_YAML
+main: edu.unca.thaithco.TylerPlugin.TylerPlugin
+name: ${project.name}
+version: ${project.version}
+author: SampleAuthor
+description: ${project.description}
+commands:
+  sample:
+    description: set the sample message
+    usage: /<command> message
+    permission: sample.message
+  jump:
+    description: applies a vertical force specified by the user (does not work)
+    usage: /jump <force>
+    permission: jump
+  arrows:
+    description: creates an amount of arrows specified by the user
+    usage: /arrows <amount> <force>
+    permission: arrows
+permissions:
+  sample.*:
+    description: gives permissions of the sample message
+    default: op
+    children:
+      sample.message:
+        description: gives permission to set the sample message using the sample command
+  jump:
+    description: gives perms for jump
+    default: true
+  arrows:
+    description: gives perms for arrows
+    default: true
