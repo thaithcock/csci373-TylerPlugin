@@ -69,6 +69,7 @@ public class TylerPluginCommandExecutor implements CommandExecutor {
         		 p.getWorld().spawnArrow(p.getLocation(), new Vector(-threshold1, -threshold2, -threshold3), arg3, arg4);
         	}
         	p.getInventory().addItem(new ItemStack(Material.APPLE, 1));
+        	plugin.getLogger().info(sender.getName() + " created " + args[0] + " arrows.");
         	return true;
         }
         else {
