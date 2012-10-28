@@ -2,6 +2,7 @@ package edu.unca.thaithco.TylerPlugin;
 
 import java.text.MessageFormat;
 
+import org.bukkit.entity.Creature;
 import org.bukkit.entity.EntityType;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -46,4 +47,15 @@ public class TylerPluginListener implements Listener {
                 entityType.getName(),
                 entityType.getTypeId()));
     }
+    
+    @EventHandler
+    public void killWithLightning(PlayerInteractEntityEvent event){
+    	final Creature entity = (Creature) event.getRightClicked();
+    	
+    		entity.getLocation().getWorld().strikeLightning(entity.getLocation());
+    		entity.getLocation().getWorld().strikeLightningEffect(entity.getLocation());
+    		plugin.getLogger().info("A " + entity.getType().getName() + " is getting killed by lightning!");
+    		
+    }
+    
 }
