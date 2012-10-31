@@ -48,6 +48,10 @@ public class TylerPluginListener implements Listener {
                 entityType.getTypeId()));
     }
     
+    
+    /*
+     * Causes lightning to strike an entity when right clicked
+     */
     @EventHandler
     public void killWithLightning(PlayerInteractEntityEvent event){
     	final Creature entity = (Creature) event.getRightClicked();

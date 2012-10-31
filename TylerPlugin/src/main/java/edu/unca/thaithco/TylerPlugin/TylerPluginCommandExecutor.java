@@ -34,7 +34,7 @@ public class TylerPluginCommandExecutor implements CommandExecutor {
         }
         else if (command.getName().equalsIgnoreCase("jump") && sender.hasPermission("jump") && args.length > 0){
         	Player p = (Player) sender;
-        	p.sendMessage("inside jump else if command\nJump force: " + args[0]);
+        	p.sendMessage("Jump force: " + args[0]);
         	p.setVelocity(new Vector(0,Double.parseDouble(args[0])/10, 0));
         	plugin.getLogger().info(sender.getName() + " jumped with a force of " + args[0]);
         	return true;
@@ -44,7 +44,6 @@ public class TylerPluginCommandExecutor implements CommandExecutor {
         	float arg3,
         	      arg4;
         	Player p = (Player) sender;
-        	p.sendMessage("Inside arrows else if");
         	if(args.length == 1){
         		force = 10;
         		arg3 = 1;
